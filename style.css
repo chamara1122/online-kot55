@@ -1,33 +1,36 @@
-/* ==========================
+/* ====================================
    RESET
-========================== */
+==================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#f5f5f5;
-    padding:8px;
+    background:#f3f3f3;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:10px;
 }
 
-/* ==========================
+/* ====================================
    GRID
-========================== */
+==================================== */
 
 .container{
+    max-width:1020px;
+    margin:auto;
+
     display:grid;
     grid-template-columns:repeat(10,95px);
-    justify-content:center;
     gap:6px;
+    justify-content:center;
 }
 
-/* ==========================
+/* ====================================
    CARD
-========================== */
+==================================== */
 
 .card{
 
@@ -36,7 +39,7 @@ body{
 
     background:#fff;
 
-    border:2px solid #dcdcdc;
+    border:2px solid #ddd;
 
     border-radius:10px;
 
@@ -44,16 +47,19 @@ body{
 
     box-shadow:0 2px 6px rgba(0,0,0,.15);
 
-    transition:.2s;
+    transition:.25s;
 }
 
 .card:hover{
+
     transform:translateY(-2px);
+
+    box-shadow:0 5px 12px rgba(0,0,0,.20);
 }
 
-/* ==========================
+/* ====================================
    HEADER
-========================== */
+==================================== */
 
 .header{
 
@@ -63,29 +69,29 @@ body{
 
     align-items:center;
 
-    font-size:9px;
+    font-size:8px;
 
     font-weight:bold;
 }
 
-.header .status{
+.status{
 
-    font-size:12px;
+    font-size:11px;
 }
 
-.header .price{
+.price{
 
     color:#d60000;
 }
 
-.header .date{
+.date{
 
-    color:#444;
+    color:#666;
 }
 
-/* ==========================
+/* ====================================
    NUMBER
-========================== */
+==================================== */
 
 .number{
 
@@ -93,7 +99,7 @@ body{
 
     font-size:34px;
 
-    font-weight:bold;
+    font-weight:800;
 
     margin-top:8px;
 
@@ -102,9 +108,9 @@ body{
     line-height:1;
 }
 
-/* ==========================
+/* ====================================
    TITLE
-========================== */
+==================================== */
 
 .title{
 
@@ -112,14 +118,16 @@ body{
 
     font-size:10px;
 
-    font-weight:bold;
+    font-weight:700;
 
     color:#222;
+
+    margin-bottom:2px;
 }
 
-/* ==========================
+/* ====================================
    PLACE
-========================== */
+==================================== */
 
 .place{
 
@@ -129,16 +137,14 @@ body{
 
     color:#666;
 
-    margin-top:3px;
+    margin-bottom:5px;
 }
 
-/* ==========================
+/* ====================================
    PRIZE
-========================== */
+==================================== */
 
 .prize{
-
-    margin-top:6px;
 
     text-align:center;
 
@@ -146,17 +152,15 @@ body{
 
     font-weight:bold;
 
-    line-height:1.5;
-
-    color:#111;
+    line-height:1.4;
 }
 
-/* ==========================
+/* ====================================
    ROW COLORS
-========================== */
+==================================== */
 
 .red{
-    border-color:#ff6666;
+    border-color:#ff7070;
 }
 
 .red .number{
@@ -164,7 +168,7 @@ body{
 }
 
 .orange{
-    border-color:#ffb74d;
+    border-color:#ffb84d;
 }
 
 .orange .number{
@@ -172,7 +176,7 @@ body{
 }
 
 .green{
-    border-color:#66bb6a;
+    border-color:#69c76b;
 }
 
 .green .number{
@@ -180,7 +184,7 @@ body{
 }
 
 .cyan{
-    border-color:#4dd0e1;
+    border-color:#4fd8d8;
 }
 
 .cyan .number{
@@ -188,7 +192,7 @@ body{
 }
 
 .blue{
-    border-color:#64b5f6;
+    border-color:#6aa9ff;
 }
 
 .blue .number{
@@ -196,7 +200,7 @@ body{
 }
 
 .purple{
-    border-color:#ba68c8;
+    border-color:#c28cff;
 }
 
 .purple .number{
@@ -204,47 +208,79 @@ body{
 }
 
 .pink{
-    border-color:#f06292;
+    border-color:#ff8fb8;
 }
 
 .pink .number{
     color:#d81b60;
 }
 
-/* ==========================
+/* ====================================
    RESPONSIVE
-========================== */
+==================================== */
 
-@media(max-width:1100px){
+@media (max-width:1100px){
 
 .container{
+
 grid-template-columns:repeat(5,95px);
-}
 
 }
 
-@media(max-width:700px){
+}
+
+@media (max-width:768px){
 
 .container{
+
 grid-template-columns:repeat(3,95px);
-}
 
 }
 
-@media(max-width:500px){
+}
+
+@media (max-width:480px){
 
 .container{
-grid-template-columns:repeat(2,95px);
+
+grid-template-columns:repeat(2,90px);
+
 gap:5px;
+
 }
 
 .card{
+
 width:90px;
+
 height:120px;
+
+padding:4px;
+
 }
 
 .number{
+
 font-size:30px;
+
+}
+
+.title{
+
+font-size:9px;
+
+}
+
+.place{
+
+font-size:8px;
+
+}
+
+.prize{
+
+font-size:8px;
+
 }
 
 }
