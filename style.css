@@ -1,6 +1,7 @@
-/* ====================================
-   RESET
-==================================== */
+/* ===========================================
+   ONLINE KOTU KOLE
+   style.css
+=========================================== */
 
 *{
     margin:0;
@@ -9,32 +10,38 @@
 }
 
 body{
-    background:#f3f3f3;
-    font-family:Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+    font-family:Arial,Helvetica,sans-serif;
     padding:10px;
 }
 
-/* ====================================
+/* =========================
    GRID
-==================================== */
+========================= */
 
 .container{
-    max-width:1020px;
-    margin:auto;
 
     display:grid;
+
     grid-template-columns:repeat(10,95px);
+
     gap:6px;
+
     justify-content:center;
+
+    max-width:1100px;
+
+    margin:auto;
 }
 
-/* ====================================
+/* =========================
    CARD
-==================================== */
+========================= */
 
 .card{
 
     width:95px;
+
     height:125px;
 
     background:#fff;
@@ -45,9 +52,15 @@ body{
 
     padding:5px;
 
-    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    display:flex;
 
-    transition:.25s;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+
+    transition:.2s;
 }
 
 .card:hover{
@@ -57,9 +70,9 @@ body{
     box-shadow:0 5px 12px rgba(0,0,0,.20);
 }
 
-/* ====================================
+/* =========================
    HEADER
-==================================== */
+========================= */
 
 .header{
 
@@ -81,17 +94,17 @@ body{
 
 .price{
 
-    color:#d60000;
+    color:#d50000;
 }
 
 .date{
 
-    color:#666;
+    color:#555;
 }
 
-/* ====================================
+/* =========================
    NUMBER
-==================================== */
+========================= */
 
 .number{
 
@@ -101,16 +114,16 @@ body{
 
     font-weight:800;
 
-    margin-top:8px;
-
-    margin-bottom:8px;
+    color:#222;
 
     line-height:1;
+
+    margin:8px 0;
 }
 
-/* ====================================
+/* =========================
    TITLE
-==================================== */
+========================= */
 
 .title{
 
@@ -118,16 +131,14 @@ body{
 
     font-size:10px;
 
-    font-weight:700;
+    font-weight:bold;
 
-    color:#222;
-
-    margin-bottom:2px;
+    color:#111;
 }
 
-/* ====================================
+/* =========================
    PLACE
-==================================== */
+========================= */
 
 .place{
 
@@ -137,89 +148,84 @@ body{
 
     color:#666;
 
-    margin-bottom:5px;
+    margin-top:2px;
 }
 
-/* ====================================
+/* =========================
    PRIZE
-==================================== */
+========================= */
 
 .prize{
 
+    margin-top:5px;
+
     text-align:center;
 
-    font-size:9px;
+    font-size:8px;
 
     font-weight:bold;
 
     line-height:1.4;
 }
 
-/* ====================================
-   ROW COLORS
-==================================== */
+/* =========================
+   COLORS
+========================= */
 
 .red{
-    border-color:#ff7070;
+    border-color:#ff6b6b;
 }
-
 .red .number{
     color:#d50000;
 }
 
 .orange{
-    border-color:#ffb84d;
+    border-color:#ffb74d;
 }
-
 .orange .number{
     color:#ef6c00;
 }
 
 .green{
-    border-color:#69c76b;
+    border-color:#66bb6a;
 }
-
 .green .number{
     color:#2e7d32;
 }
 
 .cyan{
-    border-color:#4fd8d8;
+    border-color:#4dd0e1;
 }
-
 .cyan .number{
     color:#00838f;
 }
 
 .blue{
-    border-color:#6aa9ff;
+    border-color:#64b5f6;
 }
-
 .blue .number{
     color:#1565c0;
 }
 
 .purple{
-    border-color:#c28cff;
+    border-color:#ba68c8;
 }
-
 .purple .number{
     color:#7b1fa2;
 }
 
 .pink{
-    border-color:#ff8fb8;
+    border-color:#f06292;
 }
-
 .pink .number{
     color:#d81b60;
 }
 
-/* ====================================
+/* =========================
    RESPONSIVE
-==================================== */
+========================= */
 
-@media (max-width:1100px){
+@media (max-width:1200px){
 
 .container{
 
@@ -239,7 +245,11 @@ grid-template-columns:repeat(3,95px);
 
 }
 
-@media (max-width:480px){
+@media (max-width:500px){
+
+body{
+padding:5px;
+}
 
 .container{
 
@@ -256,6 +266,18 @@ width:90px;
 height:120px;
 
 padding:4px;
+
+}
+
+.header{
+
+font-size:7px;
+
+}
+
+.status{
+
+font-size:10px;
 
 }
 
@@ -279,8 +301,30 @@ font-size:8px;
 
 .prize{
 
-font-size:8px;
+font-size:7px;
 
+}
+
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print{
+
+body{
+background:#fff;
+padding:0;
+}
+
+.container{
+gap:4px;
+}
+
+.card{
+box-shadow:none;
+break-inside:avoid;
 }
 
 }
