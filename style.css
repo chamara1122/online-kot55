@@ -1,39 +1,250 @@
-.card{
-    width:95px;
-    height:125px;
-    padding:5px;
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
+body{
+    background:#f5f5f5;
+    padding:8px;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(10,95px);
+    justify-content:center;
+    gap:6px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+
+    width:95px;
+    height:125px;
+
+    background:#fff;
+
+    border:2px solid #dcdcdc;
+
+    border-radius:10px;
+
+    padding:5px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
 .header{
+
     display:flex;
+
     justify-content:space-between;
+
+    align-items:center;
+
     font-size:9px;
+
     font-weight:bold;
+}
+
+.header .status{
+
+    font-size:12px;
+}
+
+.header .price{
+
+    color:#d60000;
+}
+
+.header .date{
+
+    color:#444;
+}
+
+/* ==========================
+   NUMBER
+========================== */
+
+.number{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    margin-top:8px;
+
+    margin-bottom:8px;
+
+    line-height:1;
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.title{
+
+    text-align:center;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    color:#222;
+}
+
+/* ==========================
+   PLACE
+========================== */
+
+.place{
+
+    text-align:center;
+
+    font-size:9px;
+
+    color:#666;
+
+    margin-top:3px;
+}
+
+/* ==========================
+   PRIZE
+========================== */
+
+.prize{
+
+    margin-top:6px;
+
+    text-align:center;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    line-height:1.5;
+
+    color:#111;
+}
+
+/* ==========================
+   ROW COLORS
+========================== */
+
+.red{
+    border-color:#ff6666;
+}
+
+.red .number{
+    color:#d50000;
+}
+
+.orange{
+    border-color:#ffb74d;
+}
+
+.orange .number{
+    color:#ef6c00;
+}
+
+.green{
+    border-color:#66bb6a;
+}
+
+.green .number{
+    color:#2e7d32;
+}
+
+.cyan{
+    border-color:#4dd0e1;
+}
+
+.cyan .number{
+    color:#00838f;
+}
+
+.blue{
+    border-color:#64b5f6;
+}
+
+.blue .number{
+    color:#1565c0;
+}
+
+.purple{
+    border-color:#ba68c8;
+}
+
+.purple .number{
+    color:#7b1fa2;
+}
+
+.pink{
+    border-color:#f06292;
+}
+
+.pink .number{
+    color:#d81b60;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1100px){
+
+.container{
+grid-template-columns:repeat(5,95px);
+}
+
+}
+
+@media(max-width:700px){
+
+.container{
+grid-template-columns:repeat(3,95px);
+}
+
+}
+
+@media(max-width:500px){
+
+.container{
+grid-template-columns:repeat(2,95px);
+gap:5px;
+}
+
+.card{
+width:90px;
+height:120px;
 }
 
 .number{
-    text-align:center;
-    font-size:30px;
-    font-weight:bold;
-    margin:10px 0;
+font-size:30px;
 }
 
-.title{
-    text-align:center;
-    font-size:10px;
-    font-weight:bold;
-}
-
-.place{
-    text-align:center;
-    font-size:9px;
-    color:#555;
-    margin-top:2px;
-}
-
-.prize{
-    margin-top:6px;
-    font-size:9px;
-    text-align:center;
-    font-weight:bold;
 }
