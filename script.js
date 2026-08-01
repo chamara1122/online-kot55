@@ -59,3 +59,25 @@ for (let i = 0; i < 100; i++) {
 
     container.appendChild(card);
 }
+const paid = Math.random() > 0.5;
+
+const status = paid ? "✅" : "❌";
+
+card.innerHTML = `
+<div class="header">
+    <span>${status}</span>
+    <span>Rs.500</span>
+    <span>2026-08-01</span>
+</div>
+
+<div class="number">${number}</div>
+
+<div class="title">ONLINE කොටු KOLE</div>
+
+<div class="place">පොලොන්නරුව</div>
+
+<div class="prize">
+    <div>3/3 = 300</div>
+    <div>1/1 = 100</div>
+</div>
+`;
